@@ -1,1 +1,3 @@
-# This is my Hospital Management System
+# Hospital Management System
+
+## My Hospital Management
