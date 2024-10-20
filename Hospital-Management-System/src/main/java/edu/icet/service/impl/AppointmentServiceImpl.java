@@ -9,6 +9,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
 @Service
 @RequiredArgsConstructor
 @Slf4j
@@ -27,6 +31,29 @@ public class AppointmentServiceImpl implements AppointmentService {
     public Boolean deleteById(Integer id) {
         repository.deleteById(id);
         return true;
+    }
+
+    @Override
+    public List<Appointment> getAll() {
+        List<Appointment> appointmentList = new ArrayList<>();
+        repository.findAll().forEach(entity -> appointmentList.add(mapper.map(entity, Appointment.class)));
+        return appointmentList;
+    }
+
+    @Override
+    public Appointment getAppointmentById(Integer id) {
+        Optional<AppointmentEntity> byId =  repository.findById(id);
+
+        return mapper.map(byId, Appointment.class);
+    }
+
+    @Override
+    public List<Appointment> getAppointmentByAdminId(Integer id) {
+        List<Appointment> appointmentList = new ArrayList<>();
+        repository.findByAdminId(id).forEach(entity -> {
+            appointmentList.add(mapper.map(entity, Appointment.class));
+        });
+        return appointmentList;
     }
 
 }
