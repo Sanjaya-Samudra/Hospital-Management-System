@@ -1,7 +1,10 @@
 package edu.icet.repository;
 
 import edu.icet.entity.MedicalReportEntity;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface MedicalReportRepository extends CrudRepository<MedicalReportEntity, Integer> {
+import java.util.List;
+
+public interface MedicalReportRepository extends JpaRepository<MedicalReportEntity, Integer> {
+    List<MedicalReportEntity> findByCategory(String category);
 }
