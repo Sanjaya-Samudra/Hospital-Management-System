@@ -56,4 +56,18 @@ public class AppointmentServiceImpl implements AppointmentService {
         return appointmentList;
     }
 
+    @Override
+    public List<Appointment> getAppointmentByPatientId(Integer id) {
+        List<Appointment> appointmentList = new ArrayList<>();
+        repository.findByPatientId(id).forEach(entity -> appointmentList.add(mapper.map(entity, Appointment.class)));
+        return appointmentList;
+    }
+
+    @Override
+    public List<Appointment> getAppointmentByType(String type) {
+        List<Appointment> appointmentList = new ArrayList<>();
+        repository.findByType(type).forEach(entity -> appointmentList.add(mapper.map(entity, Appointment.class)));
+        return appointmentList;
+    }
+
 }

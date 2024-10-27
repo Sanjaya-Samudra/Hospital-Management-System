@@ -42,9 +42,19 @@ public class AppointmentController {
         return appointmentService.getAppointmentById(id);
     }
 
+    @GetMapping("/get-appointment-by-patient-id/{id}")
+    public List<Appointment> getAppointmentByPatientId(@PathVariable Integer id){
+        return appointmentService.getAppointmentByPatientId(id);
+    }
+
     @GetMapping("/get-appointment-by-admin-id/{id}")
     public List<Appointment> getAppointmentByAdminId(@PathVariable Integer id){
         return appointmentService.getAppointmentByAdminId(id);
+    }
+
+    @GetMapping("/get-appointment-by-type/{type}")
+    public List<Appointment> getAppointmentByType(@PathVariable String type){
+        return appointmentService.getAppointmentByType(type);
     }
 
 
