@@ -10,6 +10,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/patient")
+@CrossOrigin
 public class PatientController {
 
     final PatientService service;
