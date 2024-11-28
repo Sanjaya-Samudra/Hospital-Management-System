@@ -1,0 +1,99 @@
+<div>
+  <div class="grid gap-6 mb-6 md:grid-cols-2">
+    <div>
+      <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Full Name</label>
+      <input type="text" id="first_name" [(ngModel)]="patient.name"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        placeholder="Saman" required />
+    </div>
+    <div>
+      <label for="last_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">NIC</label>
+      <input type="text" id="last_name" [(ngModel)]="patient.nic"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        placeholder="000000V" required />
+    </div>
+    <div>
+
+      <div class="">
+        <label for="bloodGroup" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an
+          Blood Group</label>
+        <select id="bloodGroup" [(ngModel)]="patient.bloodGroup"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+          <option selected>Choose a Blood Group</option>
+          <option value="A+">A positive (A+)</option>
+          <option value="A-">A negative (A-)</option>
+          <option value="B+">B positive (B+)</option>
+          <option value="B-">B negative (B-)</option>
+          <option value="AB+">AB positive (AB+)</option>
+          <option value="AB-">AB negative (AB-)</option>
+          <option value="O+">O positive (O+)</option>
+          <option value="O-">O negative (O-)</option>
+        </select>
+      </div>
+
+    </div>
+    <div>
+
+      <div class="">
+        <label for="PatientCategory" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an
+          Patient Category</label>
+        <select id="PatientCategory" [(ngModel)]="patient.category"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+          <option selected>Choose a Patient Category</option>
+          <option value="A-">Emergency</option>
+          <option value="A+">Elective</option>
+          <option value="B+">Urgent</option>
+          <option value="B-">Semi-Urgent</option>
+          <option value="AB+">Non-Urgent</option>
+          <option value="AB-">Elective</option>
+        </select>
+      </div>
+
+    </div>
+    <div>
+      <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone number</label>
+      <input type="tel" id="phone" [(ngModel)]="patient.contact"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required />
+    </div>
+    <div>
+      <div class="flex flex-wrap">
+        <p class="mx-3 mt-3">Gender :</p>
+        <div class="flex items-center me-4">
+          <input id="red-radio" type="radio" value="Male" name="colored-radio" [(ngModel)]="patient.gender"
+            class="w-4 h-4 text-red-600 bg-gray-100 border-gray-300 focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+          <label for="red-radio" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Male</label>
+        </div>
+        <div class="flex items-center me-4">
+          <input checked id="purple-radio" type="radio" value="Female" name="colored-radio" [(ngModel)]="patient.gender"
+            class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+          <label for="purple-radio" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Female</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Address</label>
+  <textarea id="message" rows="4" [(ngModel)]="patient.address"
+    class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+    placeholder="Type your Address here..."></textarea>
+
+    <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Note</label>
+    <textarea id="message" rows="4" [(ngModel)]="patient.note"
+      class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      placeholder="Type your Node here..."></textarea>
+
+  <div class="mb-6">
+    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email address</label>
+    <input type="email" id="email" [(ngModel)]="patient.email"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      placeholder="john.doe@company.com" required />
+  </div>
+  <div class="mb-6">
+
+    <label for="remember" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#"
+        class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a>.</label>
+  </div>
+  <button type="button" (click)="addPatient()"
+    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">+ADD Patient</button>
+</div>
