@@ -5,10 +5,10 @@ import { PatientManageComponent } from './page/patient-manage/patient-manage.com
 export const routes: Routes = [
     {
         path:"appointment",
-        component: AppointmentManageComponent
+        component:AppointmentManageComponent
     },
     {
         path:"patient",
-        component: PatientManageComponent
+        component:PatientManageComponent
     }
 ];

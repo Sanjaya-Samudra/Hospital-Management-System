@@ -1,20 +1,21 @@
-import { CommonModule, NgFor } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-patient-manage',
   standalone: true,
-  imports: [HttpClientModule, CommonModule, NgFor],
+  imports: [HttpClientModule,CommonModule,FormsModule],
   templateUrl: './patient-manage.component.html',
   styleUrl: './patient-manage.component.css'
 })
 export class PatientManageComponent {
 
-  public patientList: any=[];
+  public patientList:any=[];
 
   constructor(private http:HttpClient){
-    this.loadPatient();
+   this.loadPatient();
   }
 
   loadPatient(){
