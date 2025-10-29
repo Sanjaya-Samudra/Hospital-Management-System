@@ -1,0 +1,93 @@
+# -----------------------------
+# Repository-level .gitignore
+# Generated to avoid committing build artifacts, IDE files, OS cruft, and secrets
+# -----------------------------
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Node / Frontend
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+/.pnp
+.pnp.js
+
+# Angular / Build
+dist/
+build/
+out-tsc/
+.angular/
+.firebase/
+coverage/
+/.vercel
+/.turbo
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+
+# IDEs and editors
+.idea/
+*.iml
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Java / Maven
+target/
+*.class
+*.jar
+*.war
+*.ear
+.settings/
+.mvn/
+
+# Gradle
+.gradle/
+build/
+
+# Spring Boot
+spring.log
+
+# Database and local secrets
+*.db
+*.sql
+*.sqlite
+.env
+.env.*
+secrets.properties
+
+# Mac and Linux
+ehthumbs.db
+Icon?
+
+# Test output
+coverage/
+test-results/
+
+# Misc
+.DS_Store
+Thumbs.db
+desktop.ini
+*.bak
+*.swp
+~$*
+
+# JetBrains
+/.idea
+/out
+
+# Windows image file caches
+ehthumbs.db
