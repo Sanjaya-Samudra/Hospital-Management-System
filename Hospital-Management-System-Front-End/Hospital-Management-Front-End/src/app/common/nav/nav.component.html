@@ -1,68 +1,71 @@
-<nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
-  <div class="px-3 py-3 lg:px-5 lg:pl-3">
-    <div class="flex items-center justify-between">
-      <div class="flex items-center justify-start rtl:justify-end">
-        <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar"
-          type="button"
-          class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+<nav class="fixed top-0 z-50 w-full bg-white/90 backdrop-blur border-b border-gray-100 dark:bg-gray-900/80 dark:border-gray-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="h-14 flex items-center justify-between">
+      <!-- Left: brand & sidebar toggle -->
+      <div class="flex items-center gap-3">
+        <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button"
+          class="inline-flex items-center p-2 text-gray-600 rounded-md sm:hidden hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
           <span class="sr-only">Open sidebar</span>
-          <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" fill-rule="evenodd"
-              d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
-            </path>
-          </svg>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
-        <a href="javacript:void(0)" class="flex ms-2 md:me-24 text-decoration-none">
-          <img src="https://e7.pngegg.com/pngimages/227/83/png-clipart-hospital-hospital-computer-icons-medicine-clinic-clinic-miscellaneous-blue-thumbnail.png" class="h-8 me-3" alt="FlowBite Logo" />
-          <p
-            class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white text-decoration-none">
-            Hostpital Management</p>
+
+        <a routerLink="/dashbord" class="flex items-center gap-3 no-underline">
+          <img src="https://e7.pngegg.com/pngimages/227/83/png-clipart-hospital-hospital-computer-icons-medicine-clinic-clinic-miscellaneous-blue-thumbnail.png"
+            alt="Hospital" class="h-8 w-8 object-contain">
+          <div class="hidden sm:block">
+            <div class="text-sm font-semibold text-gray-900 dark:text-white">Hospital Management</div>
+            <div class="text-xs text-gray-500 dark:text-gray-400">Admin Panel</div>
+          </div>
         </a>
       </div>
-      <div class="flex items-center">
-        <div class="flex items-center ms-3">
-          <div>
-            <button type="button"
-              class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
-              aria-expanded="false" data-dropdown-toggle="dropdown-user">
-              <span class="sr-only">Open user menu</span>
-              <img class="w-8 h-8 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
-                alt="user photo">
-            </button>
-          </div>
-          <div
-            class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600"
-            id="dropdown-user">
-            <div class="px-4 py-3" role="none">
-              <p class="text-sm text-gray-900 dark:text-white" role="none">
-                Neil Sims
-              </p>
-              <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">
-                neil.simsflowbite.com
-              </p>
+
+      <!-- Middle: search (desktop) -->
+      <div class="flex-1 mx-4 hidden md:flex">
+        <div class="w-full">
+          <label for="search" class="sr-only">Search</label>
+          <div class="relative">
+            <input id="search" type="search" placeholder="Search patients, reports, appointments..."
+              class="w-full h-9 pl-10 pr-3 text-sm rounded-md border border-gray-200 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200" />
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z"/></svg>
             </div>
-            <ul class="py-1" role="none">
-              <li>
-                <a href="#"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
-                  role="menuitem">Dashboard</a>
-              </li>
-              <li>
-                <a href="#"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
-                  role="menuitem">Settings</a>
-              </li>
-              <li>
-                <a href="#"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
-                  role="menuitem">Earnings</a>
-              </li>
-              <li>
-                <a href="#"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
-                  role="menuitem">Sign out</a>
-              </li>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: actions -->
+      <div class="flex items-center gap-3">
+        <!-- small search for mobile -->
+        <button class="md:hidden p-2 rounded-md text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z"/></svg>
+        </button>
+
+        <!-- notifications -->
+        <button class="relative p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800">
+          <span class="sr-only">View notifications</span>
+          <svg class="w-5 h-5 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0a3 3 0 01-6 0v0h6z"/></svg>
+          <span class="absolute -top-0.5 -right-0.5 inline-flex items-center justify-center px-1.5 py-0.5 text-xs font-semibold leading-none text-white bg-red-500 rounded-full">3</span>
+        </button>
+
+        <!-- user -->
+        <div class="relative">
+          <button type="button" class="flex items-center gap-2 p-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+            <img class="w-8 h-8 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="User" />
+            <div class="hidden sm:flex flex-col text-left">
+              <span class="text-sm font-medium text-gray-900 dark:text-white">Dr. Sarah</span>
+              <span class="text-xs text-gray-500 dark:text-gray-400">Cardiology</span>
+            </div>
+          </button>
+          <!-- simple dropdown (behavior via Flowbite if available) -->
+          <div id="dropdown-user" class="hidden absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 dark:bg-gray-800 dark:divide-gray-700 z-50">
+            <div class="px-3 py-2">
+              <p class="text-sm text-gray-900 dark:text-white">Dr. Sarah</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400 truncate">sarah.johnson&#64;hospital.com</p>
+            </div>
+            <ul class="py-1 text-sm">
+              <li><a href="#" class="block px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-700">Profile</a></li>
+              <li><a href="#" class="block px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-700">Settings</a></li>
+              <li><a href="#" class="block px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-700">Sign out</a></li>
             </ul>
           </div>
         </div>
