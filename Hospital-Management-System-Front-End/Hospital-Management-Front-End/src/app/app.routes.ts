@@ -18,14 +18,6 @@ export const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: "appointment",
-    component: AppointmentManageComponent
-  },
-  {
-    path: "patient",
-    component: PatientManageComponent
-  },
-  {
     path: "dashboard",
     component: DashBoardPageComponent,
     children: [
