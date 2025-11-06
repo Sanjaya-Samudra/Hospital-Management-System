@@ -11,7 +11,7 @@ import { FooterComponent } from './common/footer/footer.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit{
-  title = 'Hostpital-Manege-front-end';
+  title = 'Hospital-Manage-front-end';
   ngOnInit(): void {
     initFlowbite();
   }

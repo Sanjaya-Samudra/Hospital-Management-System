@@ -4,12 +4,12 @@ import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from '../../common/footer/footer.component';
 
 @Component({
-  selector: 'app-dash-bord-page',
+  selector: 'app-dash-board-page',
   standalone: true,
   imports: [NavComponent, FooterComponent ,RouterOutlet],
-  templateUrl: './dash-bord-page.component.html',
-  styleUrl: './dash-bord-page.component.css'
+  templateUrl: './dash-board-page.component.html',
+  styleUrl: './dash-board-page.component.css'
 })
-export class DashBordPageComponent {
+export class DashBoardPageComponent {
 
 }

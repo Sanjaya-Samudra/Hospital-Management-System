@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-appoimtment-root',
+  selector: 'app-appointment-root',
   standalone: true,
   imports: [RouterOutlet,RouterLink],
-  templateUrl: './appoimtment-root.component.html',
-  styleUrl: './appoimtment-root.component.css'
+  templateUrl: './appointment-root.component.html',
+  styleUrl: './appointment-root.component.css'
 })
-export class AppoimtmentRootComponent {
+export class AppointmentRootComponent {
 
 }

@@ -2,12 +2,12 @@ import { Routes } from '@angular/router';
 import { AppointmentManageComponent } from './page/appointment-manage/appointment-manage.component';
 import { PatientManageComponent } from './page/patient-manage/patient-manage.component';
 import { LoginComponent } from './page/login/login.component';
-import { DashBordPageComponent } from './page/dash-bord-page/dash-bord-page.component';
+import { DashBoardPageComponent } from './page/dash-board-page/dash-board-page.component';
 import { AddPatientComponent } from './page/add-patient/add-patient.component';
 import { PatientRootComponent } from './page/patient-root/patient-root.component';
 import { DashPageComponent } from './page/dash-page/dash-page.component';
 import { AddAppointmentComponent } from './page/add-appointment/add-appointment.component';
-import { AppoimtmentRootComponent } from './page/appoimtment-root/appoimtment-root.component';
+import { AppointmentRootComponent } from './page/appointment-root/appointment-root.component';
 import { ReportRootComponent } from './page/report-root/report-root.component';
 import { AddReportComponent } from './page/add-report/add-report.component';
 import { ManageReportComponent } from './page/manage-report/manage-report.component';
@@ -26,8 +26,8 @@ export const routes: Routes = [
     component: PatientManageComponent
   },
   {
-    path: "dashbord",
-    component: DashBordPageComponent,
+    path: "dashboard",
+    component: DashBoardPageComponent,
     children: [
       {
         path:"",
@@ -35,7 +35,7 @@ export const routes: Routes = [
       },
       {
         path: "appointment",
-        component: AppoimtmentRootComponent,
+        component: AppointmentRootComponent,
         children:[
           {
             path:"",
