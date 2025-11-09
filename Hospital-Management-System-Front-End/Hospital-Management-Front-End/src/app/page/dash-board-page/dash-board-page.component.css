@@ -1,0 +1,97 @@
+/* ===========================================
+   DASHBOARD LAYOUT
+   =========================================== */
+
+.main-content {
+  margin-left: 280px; /* Sidebar width */
+  margin-top: 70px; /* Header height */
+  min-height: calc(100vh - 70px); /* Full height minus header */
+  width: calc(100vw - 280px); /* Full width minus sidebar */
+  background: #f8fafc;
+  transition: margin-left 0.25s ease-in-out, width 0.25s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+.content-wrapper {
+  padding: 2rem;
+  max-width: 100%;
+  background: #f8fafc;
+  transition: padding-left 0.25s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .main-content {
+    margin-left: 0; /* Remove sidebar margin on tablets */
+    width: 100vw; /* Full width on tablets */
+  }
+
+  .content-wrapper {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0; /* Ensure no sidebar margin on mobile */
+    margin-top: 60px; /* Adjust for mobile header height */
+    width: 100vw; /* Full width on mobile */
+    padding-top: 1rem; /* Add some top padding for mobile */
+  }
+
+  .content-wrapper {
+    padding: 1rem 0.75rem; /* Reduce padding on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    margin-top: 60px;
+    width: 100vw; /* Full width on very small screens */
+  }
+
+  .content-wrapper {
+    padding: 0.75rem 0.5rem; /* Even less padding on very small screens */
+  }
+}
+
+/* When sidebar is collapsed (if implemented) */
+.main-content.sidebar-collapsed {
+  margin-left: 80px; /* Collapsed sidebar width */
+  width: calc(100vw - 80px); /* Full width minus collapsed sidebar */
+}
+
+/* Additional padding for collapsed sidebar to prevent overlap */
+.main-content.sidebar-collapsed .content-wrapper {
+  padding-left: 4rem; /* Extra left padding when sidebar is collapsed (64px) */
+}
+
+/* Ensure mobile overlay doesn't interfere */
+@media (max-width: 768px) {
+  .main-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Make sure content is accessible when mobile menu is open */
+  .main-content.mobile-menu-open {
+    pointer-events: none;
+  }
+
+  .main-content.mobile-menu-open .content-wrapper {
+    pointer-events: auto;
+  }
+}
+
+/* Print styles */
+@media print {
+  .main-content {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .content-wrapper {
+    padding: 0;
+  }
+}

@@ -1,6 +1,7 @@
-<app-nav></app-nav>
-<div class="p-4 sm:ml-64">
-    <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
+<app-nav (sidebarCollapsed)="onSidebarCollapsed($event)"></app-nav>
+<app-header></app-header>
+<div class="main-content" [class.sidebar-collapsed]="isSidebarCollapsed">
+    <div class="content-wrapper" [class.sidebar-collapsed]="isSidebarCollapsed">
       <router-outlet></router-outlet>
     </div>
  </div>
