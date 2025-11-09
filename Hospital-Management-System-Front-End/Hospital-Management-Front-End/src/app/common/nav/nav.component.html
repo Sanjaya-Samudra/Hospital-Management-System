@@ -9,7 +9,7 @@
         </svg>
       </div>
       <div class="logo-text" [class.hidden]="isCollapsed">
-        <h3>HMS</h3>
+        <h3>HealthWave</h3>
         <span>Hospital Management</span>
       </div>
     </div>
@@ -61,68 +61,3 @@
     </button>
   </div>
 </div>
-
-<!-- Mobile Menu Overlay -->
-<div class="mobile-overlay" [class.active]="isMobileMenuOpen" (click)="toggleMobileMenu()"></div>
-
-<!-- Mobile Menu -->
-<div class="mobile-sidebar" [class.active]="isMobileMenuOpen">
-  <div class="mobile-header">
-    <div class="mobile-logo">
-      <div class="logo-icon">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-        </svg>
-      </div>
-      <span>HMS</span>
-    </div>
-    <button class="mobile-close" (click)="toggleMobileMenu()">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M6 18L18 6M6 6l12 12"/>
-      </svg>
-    </button>
-  </div>
-
-  <!-- Mobile User Profile -->
-  <div class="mobile-user">
-    <img [src]="user.avatar" [alt]="user.name">
-    <div class="mobile-user-info">
-      <h4>{{ user.name }}</h4>
-      <p>{{ user.role }}</p>
-    </div>
-  </div>
-
-  <!-- Mobile Navigation -->
-  <nav class="mobile-nav">
-    <ul class="mobile-nav-list">
-      <li *ngFor="let item of navItems" class="mobile-nav-item">
-        <a [routerLink]="item.route" routerLinkActive="active" class="mobile-nav-link" (click)="toggleMobileMenu()">
-          <div class="mobile-nav-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path [attr.d]="getIconPath(item.icon)"></path>
-            </svg>
-          </div>
-          <span>{{ item.label }}</span>
-          <span class="mobile-badge" *ngIf="item.badge > 0">{{ item.badge }}</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-
-  <!-- Mobile Logout -->
-  <div class="mobile-actions">
-    <button class="mobile-action-btn logout" (click)="logout()">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/>
-      </svg>
-      Logout
-    </button>
-  </div>
-</div>
-
-<!-- Mobile Menu Toggle Button -->
-<button class="mobile-toggle" (click)="toggleMobileMenu()" [class.active]="isMobileMenuOpen">
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
